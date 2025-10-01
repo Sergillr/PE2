@@ -1,0 +1,7 @@
+Et trobés en una incursió per determinar el parader de un tesor ocult d'un famos lladre recientment executat.
+Et van donar a elegir entre tres objectes: 
+	-El llaç de la submisio el qual permet domar qualsevol bèstia (Llaç)
+	-El bàcul de regressió, que dona al usuari la capacitat de retornar cualsevol objecte al seu estat original (bacul)
+	-El arc de heracle i fletches de Hèracles, Arc amb la el poder de destrossar qualsevol ser inclòs roques d'un shot (arc)
+que vas seleccionar?:
+	
