@@ -24,9 +24,16 @@ Que faras?
 	Sents una imperiosa necessitat de tomar lo...
 	Que faras?:
 		-Tomar una mica de les joyes per tú (Tomar)
-		-Esperar als teus companys a que arrivin a  
+			-Agafes una unes cuantes joyes, pero no pots evitar pensar que no es suficient aixi que agafes més de la pila, però no satisfeix la teva abaricia i continues tomant i tomant. 
+			Les teves cames es trenquen sobre el pes del tesor però no pots evitar seguir tomant. El teu cos termina aplastat per les piles de joyes i art. (Final Dolent: Sucumb)
+		
+		-Esperar als teus companys a que arrivin a la cova. (Esperar)
+			- Esperes una estona i finalment arriven els teus companys, els guias fins a la sala però algo no esta bé, tots semblem incomodes miran se entre si amb mirades de desconfiança. Els en algun moment units grup del regne comencen a barallar se per el or de una manera atinatural.
+			un del cops termina golpeixant la teva nuca. (Final Dolent: Febre del Or)
 
-
+		- No et fies, fer us del bacul en la sala (Bacul)
+			-El bacul es activat i aquella necessitat per or desapareix de la teva ment. Ya amb el cap clar decideixes Esperar als teus companys.
+			Tras tornar al regne us pagan la vostra part del boti però sembla que el rei esperava més or. (Final Bo: Regressió)
 	Decideixes avançar, mentres que avances notes una sensacio de que et segueixen. Pero no tens temps per preucuparte perque un 'Soldat de roca' apareix del ether.
 	El soldat sembla lent pero qualsevol cop que et doni podri ser fatal.
 	Que faras?
