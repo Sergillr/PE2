@@ -4,4 +4,33 @@ Et van donar a elegir entre tres objectes:
 	-El bàcul de regressió, que dona al usuari la capacitat de retornar cualsevol objecte al seu estat original (bacul)
 	-El arc de heracle i fletches de Hèracles, Arc amb la el poder de destrossar qualsevol ser inclòs roques d'un shot (arc)
 que vas seleccionar?:
-	
+
+El lladre tras una mica de 'persuacio' va revelar que el seu tresor es trova a 15 dies del regne en una cova marcada amb el signe del seu creda.
+La teva espedició arriba a un bosc on et separes en un accident, pero et trobés per el teu compte una cova. Fixante be et dones compte de una marca a la part de la esquerra de la entrada. Es el teu objectiu. 
+Seguint el protocol entres a la cova.
+
+En adentrar se en la misteriosa caberna et trobes amb una cambra.
+Al centre de la cambra sobre una roca es troba un caliç, en el seu interior una substancia clarament toxica. Al final de la sala un retrata es trova contrastaant amb la hambientacio de la caberna. una porta a la parret esquerra sembla adentrar se mes fins als fons.
+Una sensacio de perill et ofega, fent se més forta cada segon que pasas en la sala. 
+Que faras?
+	-Llençar el caliç al cuadre (Llençar)
+	-Avançar a la següent sala	(Avançar)
+	-Utilitzar el bacul del regres en el cuadre (Bacul) //solament visible si has seleccionat el bacul
+		-Dilucides que el perill es troba en el cuadre i decideixes actuar contra aquest. Conjures el bacul en el cuadre y una estranya magia desapareix junt amb un crit estrident. (perds el bacul).
+	-Disparar al cuadre amb el arc de Hèracles (Arc) //solament visible si has seleccionat el arc
+		-Dilucides que el perill es troba en el cuadre i decideixes actuar contra aquest. Dispares la fletxa y fa contacte amb el que sembla una barrera invisible i rapidament es redirigeix fins el teu cor. (Final Dolent: Reflecció) 
+
+	Darrera del cuadre es troba un pasadis seecret i tras adentrar se una mica troves una sala ple de les joyes mes costoses i el art més valuos del que tenies registre. 
+	Sents una imperiosa necessitat de tomar lo...
+	Que faras?:
+		-Tomar una mica de les joyes per tú (Tomar)
+		-Esperar als teus companys a que arrivin a  
+
+
+	Decideixes avançar, mentres que avances notes una sensacio de que et segueixen. Pero no tens temps per preucuparte perque un 'Soldat de roca' apareix del ether.
+	El soldat sembla lent pero qualsevol cop que et doni podri ser fatal.
+	Que faras?
+		-Evadir lo i anar a la seguent sala. (Avançar)
+		-Retrocedir i esperar al grup. (Retrocedir)
+		-Destrossar-lo de un dispar. (Arc) //solament si tens el arc
+		-Domar lo amb el llaç. (Llaç)	//solament si tens el llaç
