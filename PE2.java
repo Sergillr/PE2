@@ -1,108 +1,220 @@
 import java.util.Scanner;
+
 public class PE2 {
     public static void main(String[] args) {
+        // creem el scanner i algunes variables per guardar l’estat del jugador
         Scanner e = new Scanner(System.in);
-        boolean arc = false, Soga = false, bacul = false, manticora = false, ferit;
+        boolean arc = false, soga = false, bacul = false, manticora = false, ferit = false;
+
+        // text d'introducció i selecció de l'objecte inicial
         System.out.println(
                 "Et trobés en una incursió per determinar el parader de un tesor ocult d'un famos lladre recientment executat.\r\n"
-                        + //
-                        "Et van donar a elegir entre tres objectes: \r\n" + //
-                        "\t-El Soga de la submisio el qual permet domar qualsevol bèstia (Soga)\r\n" + //
-                        "\t-El bàcul de regressió, que dona al usuari la capacitat de retornar cualsevol objecte al seu estat original (bacul)\r\n"
-                        + //
-                        "\t-El arc de heracle i fletches de Hèracles, Arc amb la el poder de destrossar qualsevol ser inclòs roques d'un shot (arc)\r\n"
-                        + //
-                        "que vas seleccionar?:\r\n" + //
-                        "");
+                        + "Et van donar a elegir entre tres objectes: \r\n"
+                        + "\t-El Soga de la submisio... (Soga)\r\n"
+                        + "\t-El bàcul de regressió... (bacul)\r\n"
+                        + "\t-El arc de heracle... (arc)\r\n"
+                        + " Que vas seleccionar?:");
+
+        // llegim la selecció del jugador
         String item = e.nextLine();
+
+        // assignem l'objecte seleccionat
         if (item.equals("Soga")) {
-            Soga = true;
+            soga = true;
         } else if (item.equals("Arc")) {
             arc = true;
         } else {
             bacul = true;
         }
-        System.out.println(
-                "El lladre tras una mica de 'persuacio' va revelar que el seu tresor es trova a 15 dies del regne en una cova mArcada amb el signe del seu creda.\r\n"
-                        + //
-                        "La teva espedició arriba a un bosc on et separes en un accident, pero et trobés per el teu compte una cova. Fixante be et dones compte de una mArca a la part de la esquerra de la entrada. Es el teu objectiu. \r\n"
-                        + //
-                        "Seguint el protocol entres a la cova.\r\n" + //
-                        "\r\n" + //
-                        "En adentrar se en la misteriosa caberna et trobes amb una cambra.\r\n" + //
-                        "Al centre de la cambra sobre una roca es troba un got, en el seu interior una substancia clarament toxica. Al final de la sala un retrata es trova contrastaant amb la hambientacio de la caberna. una porta a la parret esquerra sembla adentrar se mes fins als fons.\r\n"
-                        + //
-                        "Una sensacio de perill et ofega, fent se més forta cada segon que pasas en la sala. \r\n" + //
-                        "Que faras?\r\n" + //
-                        "\t-Llençar el got al cuadre (Got)\r\n" + //
-                        "\t-Avançar a la següent sala\t(Avançar)\r\n" + //
-                        "");
-        if (bacul) {
-            System.out.println("-Utilitzar el bacul del regres en el cuadre (Bacul)");
-        } else if (arc) {
-            System.out.println(
-                    "\t-Disparar al cuadre amb el Arc de Hèracles (Arc)");
-        }
-        String firstPuzzle = e.nextLine();
-        if (firstPuzzle.equals("Bacul") && bacul) {
-            System.out.println(
-                    "Dilucides que el perill es troba en el cuadre i decideixes actuar contra aquest. Utilitzes el bacul en el cuadre y una estranya magia desapareix junt amb un crit estrident. \t Darrera del cuadre es troba un pasadis seecret i tras adentrar se una mica troves una sala ple de les joyes mes costoses i el art més valuos del que tenies registre. \r\n"
-                            + //
-                            "\tSents una imperiosa necessitat de tomar lo...\r\n" + //
-                            "\tQue faras?:\r\n" + //
-                            "\t\t-Tomar una mica de les joyes per tú (Tomar)\r\n\t\t -Esperar als teus companys a que arrivin a la cova. (Esperar)\r\n"
-                            + //
-                            "");
-            String secondPuzzle = e.nextLine();
-            if (secondPuzzle.equals("Tomar")) {
-                System.out.println(
-                        "\t\t\t-Agafes una unes cuantes joyes, pero no pots evitar pensar que no es suficient aixi que agafes més de la pila, però no satisfeix la teva abaricia i continues tomant i tomant. \r\n"
-                                + //
-                                "\t\t\tLes teves cames es trenquen sobre el pes del tesor però no pots evitar seguir tomant. El teu cos termina aplastat per les piles de joyes i art. (Final Dolent: Sucumb)\r\n"
-                                + //
-                                "");
-            } else if (secondPuzzle.equals("Esperar")) {
-                System.out.println(
-                        "\t\t\t- Esperes una estona i finalment arriven els teus companys, els guias fins a la sala però algo no esta bé, tots semblem incomodes miran se entre si amb mirades de desconfiança. Els en algun moment units grup del regne comencen a barallar se per el or de una manera atinatural.\r\n"
-                                + //
-                                "\t\t\tun del cops termina golpeixant la teva nuca. (Final Dolent: Febre del Or)\r\n" + //
-                                "");
-        } else if (firstPuzzle.equals("Arc") && arc) {
-            System.out.println(
-                    "\t\t-Dilucides que el perill es troba en el cuadre i decideixes actuar contra aquest. Dispares la fletxa y fa contacte amb el que sembla una barrera invisible i rapidament es redirigeix fins el teu cor. (Final Dolent: Reflecció) ");
 
-        } else if (firstPuzzle.equals("Got")) {
+        // inici de la primera prova (sala del got i el quadre)
+        System.out.println(
+                "El lladre tras una mica de 'persuacio'... Que faras?\r\n"
+                        + "\t-Llençar el got al cuadre. (Got)\r\n"
+                        + "\t-Avançar a la següent sala. (Avançar)");
+
+        // afegim opcions especials si el jugador té el bàcul o l’arc
+        if (bacul) {
+            System.out.println("\t -Utilitzar el bacul del regres en el cuadre (Bacul)");
+        } else if (arc) {
+            System.out.println("\t-Disparar al cuadre amb el Arc de Hèracles (Arc)");
+        }
+
+        // llegim la decisió del jugador
+        String firstPuzzle = e.nextLine();
+
+        // si escull usar el bacul
+        if (firstPuzzle.equals("Bacul") && bacul) {
+            // accedeix a la sala del tresor
             System.out.println(
-                    "Dilucides que el perill es troba en el cuadre i decideixes actuar contra aquest. Llences el got al cuadre y una estranya magia desapareix junt amb un crit estrident. \t Darrera del cuadre es troba un pasadis seecret i tras adentrar se una mica troves una sala ple de les joyes mes costoses i el art més valuos del que tenies registre. \r\n"
-                            + //
-                            "\tSents una imperiosa necessitat de tomar lo...\r\n" + //
-                            "\tQue faras?:\r\n" + //
-                            "\t\t-Tomar una mica de les joyes per tú (Tomar)\r\n\t\t -Esperar als teus companys a que arrivin a la cova. (Esperar)\r\n"
-                            + //
-                            "");
-            if (bacul) {
-                System.out.println("\t\t- No et fies, fer us del bacul en la sala (Bacul)\r\n" + //
-                        "");
-            }
+                    "Dilucides que el perill es troba en el cuadre... Que faras?:\r\n"
+                            + "\t-Tomar una mica de les joyes per tú (Tomar)\r\n"
+                            + "\t -Esperar als teus companys... (Esperar)");
+            // el bacul s'utilitza un cop
+            bacul = false;
+
+            // llegim la resposta dins la sala
             String secondPuzzle = e.nextLine();
+
+            // final dolent per avarícia
             if (secondPuzzle.equals("Tomar")) {
-                System.out.println(
-                        "\t\t\t-Agafes una unes cuantes joyes, pero no pots evitar pensar que no es suficient aixi que agafes més de la pila, però no satisfeix la teva abaricia i continues tomant i tomant. \r\n"
-                                + //
-                                "\t\t\tLes teves cames es trenquen sobre el pes del tesor però no pots evitar seguir tomant. El teu cos termina aplastat per les piles de joyes i art. (Final Dolent: Sucumb)\r\n"
-                                + //
-                                "");
-            } else if (secondPuzzle.equals("Esperar")) {
-                System.out.println(
-                        "\t\t\t- Esperes una estona i finalment arriven els teus companys, els guias fins a la sala però algo no esta bé, tots semblem incomodes miran se entre si amb mirades de desconfiança. Els en algun moment units grup del regne comencen a barallar se per el or de una manera atinatural.\r\n"
-                                + //
-                                "\t\t\tun del cops termina golpeixant la teva nuca. (Final Dolent: Febre del Or)\r\n" + //
-                                "");
+                System.out.println("Agafes una unes cuantes joyes... (Final Dolent: Sucumb)");
             }
+            // final dolent per esperar
+            else if (secondPuzzle.equals("Esperar")) {
+                System.out.println("Esperes una estona... (Final Dolent: Febre del Or)");
+            }
+
+        // si escull usar l’arc al quadre
+        } else if (firstPuzzle.equals("Arc") && arc) {
+            // final dolent, el tret és reflectit
+            System.out.println("Dispares la fletxa... (Final Dolent: Reflecció)");
+
+        // si escull llençar el got al quadre
+        } else if (firstPuzzle.equals("Got")) {
+            // desbloqueja la sala del tresor
+            System.out.println(
+                    "Llences el got al cuadre... Que faras?:\r\n"
+                            + "\t-Tomar una mica de les joyes per tú (Tomar)\r\n"
+                            + "\t -Esperar als teus companys... (Esperar)");
+
+            // si té el bacul, es mostra una nova opció
+            if (bacul) {
+                System.out.println("\t- No et fies, fer us del bacul en la sala (Bacul)");
+            }
+
+            // llegim la nova decisió
+            String secondPuzzle = e.nextLine();
+
+            // final dolent per avarícia
+            if (secondPuzzle.equals("Tomar")) {
+                System.out.println("Agafes unes cuantes joyes... (Final Dolent: Sucumb)");
+            }
+            // final dolent per esperar
+            else if (secondPuzzle.equals("Esperar")) {
+                System.out.println("Esperes una estona... (Final Dolent: Febre del Or)");
+            }
+            // final bo si fa servir el bacul
+            else if (secondPuzzle.equals("Bacul") && bacul) {
+                System.out.println("El bacul es activat... (Final Bo: Regressió)");
+            }
+
+        // si escull avançar i ignora el quadre
+        } else {
+            // apareix un soldat de roca
+            System.out.println("Decideixes avançar... Que faras?\r\n"
+                    + "\t-Evadir lo i anar a la seguent sala. (Avançar)\r\n"
+                    + "\t-Retrocedir i esperar al grup. (Retrocedir)");
+
+            // opcions especials si té objectes
+            if (arc) {
+                System.out.println("\t-Destrossar-lo de un dispar. (Arc)");
+            } else if (soga) {
+                System.out.println("\t -Domar lo amb el llaç. (Soga)");
+            }
+
+            // llegim la decisió
+            String secondPuzzle = e.nextLine();
+
+            // final dolent: trampa del mimic
+            if (secondPuzzle.equals("Retrocedir")) {
+                System.out.println("Decideixes donar mitja volta... Final dolent: mimic");
+            }
+            // final dolent: el golem no es pot domar
+            else if (secondPuzzle.equals("Soga")) {
+                System.out.println("Llenças la corda... Final dolent: Cor de pedre");
+            }
+            // si escapa o lluita
             else {
-                System.out.println("-El bacul es activat i aquella necessitat per or desapareix de la teva ment. Ya amb el cap clar decideixes Esperar als teus companys.\r\n" + //
-                                        "\t\t\tTras tornar al regne us pagan la vostra part del boti però sembla que el rei esperava més or. (Final Bo: Regressió)");
+                // si dispara amb l’arc
+                if (secondPuzzle.equals("Arc") && arc) {
+                    System.out.println("Utilitzes el arc... però es trenca");
+                    arc = false;
+                }
+                // si escapa aprofitant la lentitud del golem
+                else {
+                    System.out.println("Escabullir te fins a la següent sala");
+                }
+
+                // nova prova: la manticora
+                System.out.println("en la seguent sala es trova una manticora...");
+
+                // opcions si tens objectes útils
+                if (soga || arc) {
+                    if (soga) {
+                        System.out.println("Que faras?\r\n"
+                                + "\t Domar la bestia. (Soga)\r\n"
+                                + "\t - Fugir de la bestia (Fugir)");
+                    } else if (arc) {
+                        System.out.println("Que faras?\r\n"
+                                + "\t Acabar amb la bestia. (Arc)\r\n"
+                                + "\t - Fugir de la bestia (Fugir)");
+                    }
+
+                    // llegim la tercera decisió
+                    String thirdPuzzle = e.next();
+
+                    // si escull domar la manticora
+                    if (thirdPuzzle.equals("Soga")) {
+                        System.out.println("Llenças la corda a la manticora... ara és aliada");
+                        manticora = true;
+                    }
+                    // si escull matar-la amb l'arc
+                    else if (thirdPuzzle.equals("Arc")) {
+                        System.out.println("Utilitzes el arc... però es trenca");
+                        arc = false;
+                    }
+                    // si escull fugir
+                    else {
+                        System.out.println("Fuges... però quedes ferit");
+                        if (arc) {
+                            System.out.println("Sents una estranya força que et fa seguir...");
+                        }
+                        ferit = true;
+                    }
+
+                    // prova final: sala amb abisme i tresor
+                    System.out.println("En arribar a la ultima sala... Que faras?:\r\n"
+                            + "\t - Saltar al altre costat.(Saltar)\r\n"
+                            + "\t - Tumbar la roca (Tumbar)");
+
+                    // si té l’arc, pot usar-lo
+                    if (arc){
+                        System.out.println("\t - El arc et crida, vol ser utilitzat.(Arc)");
+                    }
+
+                    // llegim la última decisió
+                    String finalPuzzle = e.next();
+
+                    // si escull usar l’arc
+                    if(finalPuzzle.equals("arc") && arc){
+                        System.out.println("Agafas el arc... crees un camí... (Final bó?: últim treball)");
+                    } 
+                    // si escull saltar
+                    else if(finalPuzzle.equals("Saltar")){
+                        // si té la manticora, sobreviu però queda atrapat
+                        if (manticora){
+                            System.out.println("La manticora et salva... però quedes atrapat. Final Dolent: Atrapat");
+                        }
+                        // si no té ajuda, mor
+                        else{
+                            System.out.println("Saltes... però caus. Final Dolent: Caiguda");
+                        }
+                    } 
+                    // si intenta moure la roca
+                    else if(finalPuzzle.equals("Tumbar")){
+                        // si està ferit, no pot moure-la
+                        if(ferit){
+                            System.out.println("Estàs ferit i no pots. Final Dolent: Debilitament");
+                        }
+                        // si està en condicions, aconsegueix l’or
+                        else{
+                            System.out.println("Tumbar la roca revela l’or. Final Bo: Riquesa");
+                        }
+                    }
+                }
             }
         }
+        e.close();
     }
 }
